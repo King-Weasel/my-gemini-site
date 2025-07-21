@@ -21,7 +21,7 @@ exports.handler = async function (event) {
   try {
     // Initialize the AI with your secret API key
     const genAI = new GoogleGenerativeAI(geminiApiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+    const model = genAI.getGenerativeModel({ model: "gemini-exp-1114" });
 
     // --- BUILD THE FULL PROMPT ---
     // Combine your secret system prompt with the user's input
