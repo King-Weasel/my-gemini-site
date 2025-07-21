@@ -26,7 +26,7 @@ exports.handler = async function (event) {
     const userInput = requestBody.userInput || requestBody.promptText;
 
     const genAI = new GoogleGenerativeAI(geminiApiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro" });
 
     const fullPrompt = `${secretSystemPrompt}\n\nUser: ${userInput}`;
     const result = await model.generateContent(fullPrompt);
